@@ -1,0 +1,441 @@
+:root {
+  --main-text-color: #212121;
+  --submain-text-color: #757575;
+  --header-footer-bgcolor: #2f303a;
+  --bgcolor: #fff;
+  --filter-btn-color: #f5f4fa;
+  --modify-text-color: #2196f3;
+  --main-text-font: "Roboto", sans-serif;
+  --submain-text-font: "Raleway", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+/* reset some basic styles not to repeat each time */
+
+body {
+  font-family: var(--main-text-font);
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  color: var(--main-text-color);
+  background-color: var(--bgcolor);
+}
+
+/* container for content with 1200px and safe padding 10px from each side */
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* padding 94px for section according to figma design guidelines*/
+.section {
+  padding: 94px 0px;
+}
+
+/* container for header to put in a row Logo, Navigation and Contacts. */
+
+.container-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  padding-top: 24px;
+  border-bottom: 1px solid #ececec;
+}
+
+.nav-panel {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  font-family: var(--submain-text-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: inherit;
+}
+
+/* create space between Logo and Navigation */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  margin-left: 93px;
+}
+
+/* create space between navigation's items */
+
+.nav-menu .nav-menu-item:not(:first-child) {
+  margin-left: 50px;
+}
+
+.nav-menu-link {
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  color: inherit;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link:focus {
+  color: var(--modify-text-color);
+}
+
+.contacts-list {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-list .contacts-item + .contacts-item {
+  margin-left: 50px;
+}
+
+.contacts-link {
+  display: block;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  color: var(--submain-text-color);
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--modify-text-color);
+}
+
+/* another container to display background on full screen */
+.bg-container {
+  background-color: var(--header-footer-bgcolor);
+}
+
+/* add height to section */
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+}
+
+.main-title {
+  margin-bottom: 30px;
+  width: 696px;
+  text-align: center;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: var(--bgcolor);
+}
+
+.btn-primary {
+  padding: 10px 32px;
+  min-width: 216px;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+
+  color: var(--bgcolor);
+  background-color: var(--modify-text-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  opacity: 0.8;
+}
+
+.company-advantages {
+  padding-bottom: 45px;
+}
+
+.advantages-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.advantages-title {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+.advantages-description {
+  line-height: 1.7;
+  color: var(--submain-text-color);
+}
+
+/* reduce padding between two sections */
+.work-proccess {
+  padding-top: 45px;
+}
+
+.work-proccess-title {
+  margin-bottom: 50px;
+
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.work-proccess-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.our-team {
+  background-color: var(--filter-btn-color);
+}
+
+.our-team-title {
+  margin-bottom: 50px;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.our-team-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.our-team-photo {
+  display: block;
+}
+
+.team-member-card {
+  background-color: var(--bgcolor);
+  padding: 30px 61px;
+}
+
+.team-member-name {
+  margin-bottom: 10px;
+  text-align: center;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.team-member-description {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--submain-text-color);
+}
+
+.page-footer {
+  background-color: var(--header-footer-bgcolor);
+}
+
+.page-footer-section {
+  padding: 60px 0px;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 20px;
+  font-family: var(--submain-text-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--bgcolor);
+}
+
+.footer-address {
+  margin-bottom: 9px;
+
+  font-style: normal;
+  line-height: 1.7;
+  color: var(--bgcolor);
+}
+
+.footer-contacts-list .footer-contacts-item + .footer-contacts-item {
+  margin-top: 9px;
+}
+
+.footer-contacts-link {
+  display: block;
+
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-contacts-link:hover,
+.footer-contacts-link:focus {
+  color: var(--modify-text-color);
+}
+
+.portfolio-filter-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+
+.portfolio-filter-list .portfolio-item + .portfolio-item {
+  margin-left: 8px;
+}
+
+.filter-button {
+  padding: 8px 22px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: inherit;
+  background-color: var(--filter-btn-color);
+  border-radius: 4px;
+}
+
+.filter-button:first-child {
+  padding: 8px 25px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: var(--modify-text-color);
+  color: var(--bgcolor);
+}
+
+.portfolio-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-image {
+  display: block;
+}
+
+.add-border {
+  border: 1px solid #eeeeee;
+  padding: 20px 24px;
+}
+
+.project-name {
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 2;
+}
+
+.project-type {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--submain-text-color);
+}
+.color-modify {
+  color: var(--modify-text-color);
+}
+
+.bg-modify {
+  background-color: var(--modify-text-color);
+  color: var(--bgcolor);
+}
