@@ -40,16 +40,21 @@
         </nav>
         <ul class="contacts-list">
           <li class="contacts-item">
-            <svg>
-              <use>
-                
-              </use>
+            <svg class="contacts-logo" width="16" height="12">
+              <use
+                href="./images/svg__sprite/symbol-defs.svg#icon-envelope"
+              ></use>
             </svg>
             <a class="contacts-link" href="mailto:info@devstudio.com"
               >info@devstudio.com</a
             >
           </li>
           <li class="contacts-item">
+            <svg class="contacts-logo" width="10" height="16">
+              <use href="./images/svg__sprite/symbol-defs.svg#icon-smartphone">
+                >
+              </use>
+            </svg>
             <a class="contacts-link" href="tel:+380961111111"
               >+38 096 111 11 11</a
             >
@@ -57,79 +62,103 @@
         </ul>
       </div>
     </header>
-    <main>
+    <main class="main">
       <div class="bg-container">
-        <div class="container">
-          <section class="section main-page">
-            <h1 class="main-title">Ефективні рішення для вашого бізнесу</h1>
-            <button class="btn-primary" type="button">Замовити послугу</button>
-          </section>
-        </div>
-      </div>
-      <div class="container">
-        <section class="section company-advantages">
-          <!--сховати заголовок-->
-          <h2 class="section-title" hidden>Наші переваги</h2>
-          <ul class="advantages-list">
-            <li class="advantages-item">
-              <h3 class="advantages-title">УВАГА ДО ДЕТАЛЕЙ</h3>
-              <p class="advantages-description">
-                Ідейні міркування, і навіть початок повсякденної роботи з
-                формування позиції.
-              </p>
-            </li>
-            <li class="advantages-item">
-              <h3 class="advantages-title">ПУНКТУАЛЬНІСТЬ</h3>
-              <p class="advantages-description">
-                Завдання організації, особливо рамки і місце навчання кадрів
-                тягне у себе.
-              </p>
-            </li>
-            <li class="advantages-item">
-              <h3 class="advantages-title">ПЛАНУВАННЯ</h3>
-              <p class="advantages-description">
-                Так само консультація з широким активом значною мірою зумовлює.
-              </p>
-            </li>
-            <li class="advantages-item">
-              <h3 class="advantages-title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-              <p class="advantages-description">
-                Значимість цих проблем настільки очевидна, що реалізація
-                планових завдань.
-              </p>
-            </li>
-          </ul>
-        </section>
-      
-        <section class="section work-proccess">
-          <h2 class="work-proccess-title">Чим ми займаємося</h2>
-          <ul class="work-proccess-list">
-            <li class="work-proccess-item">
-              <img
-                src="./images/our_team/what_we_do_pic1.jpg"
-                alt="людина друкує на клавіатурі"
-                width="370"
-              />
-            </li>
-            <li class="work-proccess-item">
-              <img
-                src="./images/our_team/what_we_do_pic2.jpg"
-                alt="людина працює з телефоном і компютером"
-                width="370"
-              />
-            </li>
-            <li class="work-proccess-item">
-              <img
-                src="./images/our_team/what_we_do_pic3.jpg"
-                alt="людина малює на планшеті"
-                width="370"
-              />
-            </li>
-          </ul>
+        <section class="container section main-page">
+          <h1 class="main-title">Ефективні рішення для вашого бізнесу</h1>
+          <button class="btn-primary" type="button">Замовити послугу</button>
         </section>
       </div>
-        <section class="section our-team">
-          <div class="container">
+      <section class="container section company-advantages">
+        <!--сховати заголовок-->
+        <h2 class="section-title" hidden>Наші переваги</h2>
+        <ul class="advantages-list">
+          <li class="advantages-item">
+            <div class="advantages-container-icon">
+              <svg class="advantages-icon" width="70" height="70">
+                <use
+                  href="./images/svg__sprite/symbol-defs.svg#icon-antenna-1"
+                ></use>
+              </svg>
+            </div>
+            <h3 class="advantages-title">УВАГА ДО ДЕТАЛЕЙ</h3>
+            <p class="advantages-description">
+              Ідейні міркування, і навіть початок повсякденної роботи з
+              формування позиції.
+            </p>
+          </li>
+          <li class="advantages-item">
+            <div class="advantages-container-icon">
+              <svg class="advantages-icon" width="70" height="70">
+                <use
+                  href="./images/svg__sprite/symbol-defs.svg#icon-clock-1"
+                ></use>
+              </svg>
+            </div>
+            <h3 class="advantages-title">ПУНКТУАЛЬНІСТЬ</h3>
+            <p class="advantages-description">
+              Завдання організації, особливо рамки і місце навчання кадрів тягне
+              у себе.
+            </p>
+          </li>
+          <li class="advantages-item">
+            <div class="advantages-container-icon">
+              <svg class="advantages-icon" width="70" height="70">
+                <use
+                  href="./images/svg__sprite/symbol-defs.svg#icon-diagram-1"
+                ></use>
+              </svg>
+            </div>
+            <h3 class="advantages-title">ПЛАНУВАННЯ</h3>
+            <p class="advantages-description">
+              Так само консультація з широким активом значною мірою зумовлює.
+            </p>
+          </li>
+          <li class="advantages-item">
+            <div class="advantages-container-icon">
+              <svg class="advantages-icon" width="70" height="70">
+                <use
+                  href="./images/svg__sprite/symbol-defs.svg#icon-astronaut-1"
+                ></use>
+              </svg>
+            </div>
+            <h3 class="advantages-title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+            <p class="advantages-description">
+              Значимість цих проблем настільки очевидна, що реалізація планових
+              завдань.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="container section work-proccess">
+        <h2 class="work-proccess-title">Чим ми займаємося</h2>
+        <ul class="work-proccess-list">
+          <li class="work-proccess-item">
+            <img
+              src="./images/our_team/what_we_do_pic1.jpg"
+              alt="людина друкує на клавіатурі"
+              width="370"
+            />
+          </li>
+          <li class="work-proccess-item">
+            <img
+              src="./images/our_team/what_we_do_pic2.jpg"
+              alt="людина працює з телефоном і компютером"
+              width="370"
+            />
+          </li>
+          <li class="work-proccess-item">
+            <img
+              src="./images/our_team/what_we_do_pic3.jpg"
+              alt="людина малює на планшеті"
+              width="370"
+            />
+          </li>
+        </ul>
+      </section>
+      <div class="our-team-container">
+        <section class="container section">
           <h2 class="our-team-title">Наша команда</h2>
           <ul class="our-team-list">
             <li class="our-team-item">
@@ -140,9 +169,39 @@
                 width="270"
               />
               <div class="team-member-card">
-              <h3 class="team-member-name">Ігор Дем'яненко</h3>
-              <p class="team-member-description">Product Designer</p>
-            </div>
+                <h3 class="team-member-name">Ігор Дем'яненко</h3>
+                <p class="team-member-description">Product Designer</p>
+                <ul class="team-member-sm">
+                  <li class="member-sm-item">
+                    <svg class="member-sm-icon" width="20" height="20">
+                      <use
+                        href="./images/svg__sprite/symbol-defs.svg#icon-instagram-2"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="member-sm-item">
+                    <svg class="member-sm-icon" width="20" height="20">
+                      <use
+                        href="./images/svg__sprite/symbol-defs.svg#icon-twitter-1"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="member-sm-item">
+                    <svg class="member-sm-icon" width="20" height="20">
+                      <use
+                        href="./images/svg__sprite/symbol-defs.svg#icon-facebook-1"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="member-sm-item">
+                    <svg class="member-sm-icon" width="20" height="20">
+                      <use
+                        href="./images/svg__sprite/symbol-defs.svg#icon-linkedin-1"
+                      ></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="our-team-item">
               <img
@@ -152,9 +211,39 @@
                 width="270"
               />
               <div class="team-member-card">
-              <h3 class="team-member-name">Ольга Рєпіна</h3>
-              <p class="team-member-description">Frontend Developer</p>
-            </div>
+                <h3 class="team-member-name">Ольга Рєпіна</h3>
+                <p class="team-member-description">Frontend Developer</p>
+                <ul class="team-member-sm">
+                  <li class="member-sm-item">
+                    <svg class="member-sm-icon" width="20" height="20">
+                      <use
+                        href="./images/svg__sprite/symbol-defs.svg#icon-instagram-2"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="member-sm-item">
+                    <svg class="member-sm-icon" width="20" height="20">
+                      <use
+                        href="./images/svg__sprite/symbol-defs.svg#icon-twitter-1"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="member-sm-item">
+                    <svg class="member-sm-icon" width="20" height="20">
+                      <use
+                        href="./images/svg__sprite/symbol-defs.svg#icon-facebook-1"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="member-sm-item">
+                    <svg class="member-sm-icon" width="20" height="20">
+                      <use
+                        href="./images/svg__sprite/symbol-defs.svg#icon-linkedin-1"
+                      ></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="our-team-item">
               <img
@@ -164,9 +253,39 @@
                 width="270"
               />
               <div class="team-member-card">
-              <h3 class="team-member-name">Микола Тарасов</h3>
-              <p class="team-member-description">Marketing</p>
-            </div>
+                <h3 class="team-member-name">Микола Тарасов</h3>
+                <p class="team-member-description">Marketing</p>
+                <ul class="team-member-sm">
+                  <li class="member-sm-item">
+                    <svg class="member-sm-icon" width="20" height="20">
+                      <use
+                        href="./images/svg__sprite/symbol-defs.svg#icon-instagram-2"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="member-sm-item">
+                    <svg class="member-sm-icon" width="20" height="20">
+                      <use
+                        href="./images/svg__sprite/symbol-defs.svg#icon-twitter-1"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="member-sm-item">
+                    <svg class="member-sm-icon" width="20" height="20">
+                      <use
+                        href="./images/svg__sprite/symbol-defs.svg#icon-facebook-1"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="member-sm-item">
+                    <svg class="member-sm-icon" width="20" height="20">
+                      <use
+                        href="./images/svg__sprite/symbol-defs.svg#icon-linkedin-1"
+                      ></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="our-team-item">
               <img
@@ -176,36 +295,146 @@
                 width="270"
               />
               <div class="team-member-card">
-              <h3 class="team-member-name">Михайло Єрмаков</h3>
-              <p class="team-member-description">UI Designer</p>
-            </div>
+                <h3 class="team-member-name">Михайло Єрмаков</h3>
+                <p class="team-member-description">UI Designer</p>
+                <ul class="team-member-sm">
+                  <li class="member-sm-item">
+                    <svg class="member-sm-icon" width="20" height="20">
+                      <use
+                        href="./images/svg__sprite/symbol-defs.svg#icon-instagram-2"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="member-sm-item">
+                    <svg class="member-sm-icon" width="20" height="20">
+                      <use
+                        href="./images/svg__sprite/symbol-defs.svg#icon-twitter-1"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="member-sm-item">
+                    <svg class="member-sm-icon" width="20" height="20">
+                      <use
+                        href="./images/svg__sprite/symbol-defs.svg#icon-facebook-1"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="member-sm-item">
+                    <svg class="member-sm-icon" width="20" height="20">
+                      <use
+                        href="./images/svg__sprite/symbol-defs.svg#icon-linkedin-1"
+                      ></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <section class="container section clients-section">
+        <h2 class="clients-title">Постійні клієнти</h2>
+        <ul class="clients-list">
+          <li class="clients-item">
+            <svg class="clients-icon" width="41" height="46">
+              <use
+                href="./images/svg__sprite/symbol-defs.svg#icon-company1"
+              ></use>
+            </svg>
+          </li>
+          <li class="clients-item">
+            <svg class="clients-icon" width="40" height="52">
+              <use
+                href="./images/svg__sprite/symbol-defs.svg#icon-company2"
+              ></use>
+            </svg>
+          </li>
+          <li class="clients-item">
+            <svg class="clients-icon" width="43" height="41">
+              <use
+                href="./images/svg__sprite/symbol-defs.svg#icon-company3"
+              ></use>
+            </svg>
+          </li>
+          <li class="clients-item">
+            <svg class="clients-icon" width="84" height="41">
+              <use
+                href="./images/svg__sprite/symbol-defs.svg#icon-company4"
+              ></use>
+            </svg>
+          </li>
+          <li class="clients-item">
+            <svg class="clients-icon" width="63" height="45">
+              <use
+                href="./images/svg__sprite/symbol-defs.svg#icon-company5"
+              ></use>
+            </svg>
+          </li>
+          <li class="clients-item">
+            <svg class="clients-icon" width="98" height="44">
+              <use
+                href="./images/svg__sprite/symbol-defs.svg#icon-company6"
+              ></use>
+            </svg>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="container footer-positioning">
+        <div class="page-footer-section">
+          <a class="footer-logo" href="./index.html"
+            ><span class="color-modify">Web</span>Studio</a
+          >
+          <address class="footer-address">
+            м. Київ, пр-т Лесі Українки, 26
+          </address>
+          <ul class="footer-contacts-list">
+            <li class="footer-contacts-item">
+              <a class="footer-contacts-link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="footer-contacts-item">
+              <a class="footer-contacts-link" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
             </li>
           </ul>
         </div>
-        </section>
-      
-    </div>
-    </main>
-    <footer class="page-footer">
-      <div class="container page-footer-section">
-        <a class="footer-logo" href="./index.html"
-          ><span class="color-modify">Web</span>Studio</a
-        >
-        <address class="footer-address">
-          м. Київ, пр-т Лесі Українки, 26
-        </address>
-        <ul class="footer-contacts-list">
-          <li class="footer-contacts-item">
-            <a class="footer-contacts-link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="footer-contacts-item">
-            <a class="footer-contacts-link" href="tel:+380961111111"
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <div class="footer-sm-container">
+          <span class="sm-container-title">Приєднуйтесь</span>
+          <ul class="team-member-sm">
+            <li class="member-sm-item">
+              <svg class="member-sm-icon" width="20" height="20">
+                <use
+                  href="./images/svg__sprite/symbol-defs.svg#icon-instagram-2"
+                ></use>
+              </svg>
+            </li>
+            <li class="member-sm-item">
+              <svg class="member-sm-icon" width="20" height="20">
+                <use
+                  href="./images/svg__sprite/symbol-defs.svg#icon-twitter-1"
+                ></use>
+              </svg>
+            </li>
+            <li class="member-sm-item">
+              <svg class="member-sm-icon" width="20" height="20">
+                <use
+                  href="./images/svg__sprite/symbol-defs.svg#icon-facebook-1"
+                ></use>
+              </svg>
+            </li>
+            <li class="member-sm-item">
+              <svg class="member-sm-icon" width="20" height="20">
+                <use
+                  href="./images/svg__sprite/symbol-defs.svg#icon-linkedin-1"
+                ></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>

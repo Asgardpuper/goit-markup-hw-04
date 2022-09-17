@@ -5,6 +5,7 @@
   --bgcolor: #fff;
   --filter-btn-color: #f5f4fa;
   --modify-text-color: #2196f3;
+  --additional-color: #afb1b8;
   --main-text-font: "Roboto", sans-serif;
   --submain-text-font: "Raleway", sans-serif;
 }
@@ -177,6 +178,25 @@ body {
   margin-left: 50px;
 }
 
+.contacts-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.contacts-logo {
+  margin-right: 10px;
+  fill: var(--submain-text-color);
+}
+
+.contacts-item:hover .contacts-logo,
+.contacts-item:focus .contacts-logo,
+.contacts-item:hover .contacts-link,
+.contacts-item:focus .contacts-link {
+  fill: var(--modify-text-color);
+  color: var(--modify-text-color);
+}
+
 .contacts-link {
   display: block;
   font-weight: 500;
@@ -185,14 +205,20 @@ body {
   color: var(--submain-text-color);
 }
 
-.contacts-link:hover,
-.contacts-link:focus {
-  color: var(--modify-text-color);
-}
-
 /* another container to display background on full screen */
 .bg-container {
+  max-width: 1600px;
   background-color: var(--header-footer-bgcolor);
+  margin: 0 auto;
+  background-image: linear-gradient(
+      180deg,
+      rgba(47, 48, 58, 0.4) 0%,
+      rgba(47, 48, 58, 0) 100%
+    ),
+    url("../images/background__hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* add height to section */
@@ -247,8 +273,21 @@ body {
 
 .advantages-list {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
+}
+
+.advantages-item {
+  width: 270px;
+}
+
+.advantages-container-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  height: 120px;
+  background-color: var(--filter-btn-color);
 }
 
 .advantages-title {
@@ -285,7 +324,7 @@ body {
   justify-content: space-between;
 }
 
-.our-team {
+.our-team-container {
   background-color: var(--filter-btn-color);
 }
 
@@ -304,13 +343,18 @@ body {
   justify-content: space-between;
 }
 
+.our-team-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 .our-team-photo {
   display: block;
 }
 
 .team-member-card {
   background-color: var(--bgcolor);
-  padding: 30px 61px;
+  padding: 30px 32px;
 }
 
 .team-member-name {
@@ -322,18 +366,96 @@ body {
   line-height: 1.2;
 }
 .team-member-description {
+  margin-bottom: 16px;
   text-align: center;
   font-size: 16px;
   line-height: 1.2;
   color: var(--submain-text-color);
 }
 
+.team-member-sm {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.member-sm-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 100%;
+}
+
+.member-sm-icon {
+  fill: var(--additional-color);
+}
+
+.member-sm-item:hover {
+  background-color: var(--modify-text-color);
+}
+
+.member-sm-item:hover .member-sm-icon,
+.member-sm-item:focus .member-sm-icon {
+  fill: var(--bgcolor);
+}
+
+.clients-section {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.clients-title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
+}
+
+.clients-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clients-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--additional-color);
+}
+
+.clients-icon {
+  fill: var(--additional-color);
+}
+
+.clients-item:hover {
+  border: 1px solid var(--modify-text-color);
+}
+
+.clients-item:hover .clients-icon,
+.clients-item:focus .clients-icon {
+  fill: var(--modify-text-color);
+}
+
 .page-footer {
   background-color: var(--header-footer-bgcolor);
 }
 
+.footer-positioning {
+  display: flex;
+  align-items: baseline;
+}
+
 .page-footer-section {
   padding: 60px 0px;
+  margin-right: 70px;
 }
 
 .footer-logo {
@@ -370,6 +492,12 @@ body {
   color: var(--modify-text-color);
 }
 
+.sm-container-title {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--bgcolor);
+}
 .portfolio-filter-list {
   display: flex;
   align-items: center;
@@ -407,6 +535,16 @@ body {
   gap: 30px;
   align-items: center;
   justify-content: space-between;
+}
+
+.portfolio-item {
+  cursor: pointer;
+  display: block;
+}
+
+.portfolio-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-image {
