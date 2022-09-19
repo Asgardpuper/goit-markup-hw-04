@@ -166,6 +166,7 @@ body {
   line-height: 1.15;
   letter-spacing: 0.02em;
   color: inherit;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-menu-link::after {
@@ -178,6 +179,7 @@ body {
   border-radius: 4px;
   background-color: var(--modify-text-color);
   opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-menu-item:hover .nav-menu-link,
@@ -208,14 +210,7 @@ body {
 .contacts-logo {
   margin-right: 10px;
   fill: var(--submain-text-color);
-}
-
-.contacts-item:hover .contacts-logo,
-.contacts-item:focus .contacts-logo,
-.contacts-item:hover .contacts-link,
-.contacts-item:focus .contacts-link {
-  fill: var(--modify-text-color);
-  color: var(--modify-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link {
@@ -224,6 +219,15 @@ body {
   line-height: 1.15;
   letter-spacing: 0.02em;
   color: var(--submain-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-item:hover .contacts-logo,
+.contacts-item:focus .contacts-logo,
+.contacts-item:hover .contacts-link,
+.contacts-item:focus .contacts-link {
+  fill: var(--modify-text-color);
+  color: var(--modify-text-color);
 }
 
 /* another container to display background on full screen */
@@ -281,6 +285,8 @@ body {
 
   color: var(--bgcolor);
   background-color: var(--modify-text-color);
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-primary:hover,
@@ -426,13 +432,16 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 100%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .member-sm-icon {
   fill: var(--additional-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.member-sm-item:hover {
+.member-sm-item:hover,
+.member-sm-item:focus {
   background-color: var(--modify-text-color);
 }
 
@@ -469,13 +478,16 @@ body {
   width: 170px;
   height: 92px;
   border: 1px solid var(--additional-color);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
   fill: var(--additional-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-item:hover {
+.clients-item:hover,
+.clients-item:focus {
   border: 1px solid var(--modify-text-color);
 }
 
@@ -525,6 +537,7 @@ body {
 
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contacts-link:hover,
@@ -556,6 +569,7 @@ body {
   height: 44px;
   border-radius: 100%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sm-item:hover,
@@ -590,6 +604,9 @@ body {
   color: inherit;
   background-color: var(--filter-btn-color);
   border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button:first-child {
@@ -615,17 +632,25 @@ body {
 .portfolio-item {
   cursor: pointer;
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item:hover {
+.portfolio-item:hover,
+.portfolio-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-item:hover .project-description-bg,
+.portfolio-item:focus .project-description-bg {
+  transform: translateY(0%);
 }
 
 .project-pic-description {
   position: relative;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .project-image {
@@ -638,6 +663,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  transform: translateY(101%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(33, 150, 243, 0.9);
 }
 
@@ -691,6 +718,14 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms ease;
+}
+
+.is-hidden {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 250ms ease;
 }
 
 .modal {
@@ -698,7 +733,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* pointer-events: all; */
   width: 528px;
   height: 581px;
   background-color: var(--bgcolor);
@@ -716,10 +750,4 @@ body {
   width: 30px;
   height: 30px;
   background-color: transparent;
-}
-
-.is-hidden {
-  /* visibility: none; */
-  pointer-events: none;
-  opacity: 0;
 }
